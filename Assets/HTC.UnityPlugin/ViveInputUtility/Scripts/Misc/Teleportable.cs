@@ -274,7 +274,7 @@ namespace HTC.UnityPlugin.Vive
         private bool m_steamVRFadeInitialized;
         private bool m_isSteamVRFading;
 
-        public IEnumerator StartTeleport(RaycastResult hitResult, Vector3 position, Quaternion rotation, float delay)
+        public virtual IEnumerator StartTeleport(RaycastResult hitResult, Vector3 position, Quaternion rotation, float delay)
         {
             if (useSteamVRFade && VRModule.activeModule == VRModuleActiveEnum.SteamVR && !Mathf.Approximately(delay, 0f))
             {
